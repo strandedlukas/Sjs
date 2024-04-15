@@ -1,0 +1,50 @@
+--configs
+local screenGui = Instance.new("ScreenGui")
+screenGui.Name = "BypassingGui"
+screenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+local backgroundFrame = Instance.new("Frame")
+backgroundFrame.Size = UDim2.new(1, 0, 1, 0)
+backgroundFrame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+backgroundFrame.BackgroundTransparency = 0.5
+backgroundFrame.Parent = screenGui
+
+local messageLabel = Instance.new("TextLabel")
+messageLabel.Size = UDim2.new(1, 0, 0, 50)
+messageLabel.Position = UDim2.new(0, 0, 0.5, -25)
+messageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+messageLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
+messageLabel.Text = "Bypassing, please wait!"
+messageLabel.Font = Enum.Font.SourceSans
+messageLabel.TextSize = 20
+messageLabel.Parent = backgroundFrame
+
+wait(5)
+screenGui:Destroy()
+
+-- Function to bypass anti-cheat and send notification
+local function bypassAntiCheat()
+    -- Send notification
+    game.StarterGui:SetCore("SendNotification", {
+        Title = "Anti Cheat Bypassed",
+        Text = "Anti cheat bypassed!!",
+        Duration = 5 -- Adjust notification duration as needed
+    })
+
+    -- Add your bypass code here
+    -- Make sure to implement the anti-cheat bypass logic
+end
+
+-- Execute the bypass function
+bypassAntiCheat()
+
+-- Anti-Kick and Anti-Ban Script
+local function preventKickAndBan()
+    while true do
+        -- Insert code here to prevent kicks and bans
+        wait(1)
+    end
+end
+
+-- Execute the function to prevent kicks and bans
+preventKickAndBan()
